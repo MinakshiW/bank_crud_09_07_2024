@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Form</title>
+{% endblock %}
+
+{% block content %}
+<div class="container bg-light">
+    <h1 class="text-center" style="text-color:brown;">Bank Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success col-6">
+        <input type="reset" class="btn btn-warning col-6 float-end">
+    </form>
+
+</div>
+{% endblock %}
